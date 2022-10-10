@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <vector>
-#include <iostream>
+// #include <iostream>
 #include "MercuryManager.h"
 #include "Utils.h"
 #include "MercuryResponse.h"

@@ -1,5 +1,5 @@
 #include "MercuryManager.h"
-#include <iostream>
+// #include <iostream>
 #include "Logger.h"
 
 std::map<MercuryType, std::string> MercuryTypeMap({

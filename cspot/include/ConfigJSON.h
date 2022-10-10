@@ -2,15 +2,12 @@
 #define CONFIGJSON_H
 
 #include <memory>
-#include <iostream>
+// #include <iostream>
 #include "FileHelper.h"
 #include "protobuf/metadata.pb.h"
 
 class ConfigJSON
 {
-private:
-    std::shared_ptr<FileHelper> _file;
-    std::string _jsonFileName;
 public:
     ConfigJSON(std::string jsonFileName, std::shared_ptr<FileHelper> file);
     bool load();
@@ -20,6 +17,9 @@ public:
     std::string deviceName;
     std::string apOverride;
     AudioFormat format;
+private:
+    std::shared_ptr<FileHelper> _file;
+    std::string _jsonFileName;
 };
 
 extern std::shared_ptr<ConfigJSON> configMan;

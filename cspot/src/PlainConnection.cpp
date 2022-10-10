@@ -101,7 +101,7 @@ std::vector<uint8_t> PlainConnection::sendPrefixPacket(const std::vector<uint8_t
 
 std::vector<uint8_t> PlainConnection::readBlock(size_t size)
 {
-    std::vector<uint8_t> buf(size);
+    __attribute__ ((aligned(4))) std::vector<uint8_t> buf(size);
     unsigned int idx = 0;
     ssize_t n;
     int retries = 0;

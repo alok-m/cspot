@@ -106,5 +106,6 @@
         "__bits": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
-    "cmake.sourceDirectory": "${workspaceFolder}/targets/cli"
+    "cmake.sourceDirectory": "${workspaceFolder}/targets/cli",
+    "cmake.configureOnOpen": false
 }

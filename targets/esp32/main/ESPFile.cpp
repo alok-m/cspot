@@ -1,4 +1,5 @@
 #include "ESPFile.h"
+#include "FileHelper.h"
 #include "Logger.h"
 #include <sys/stat.h>
 

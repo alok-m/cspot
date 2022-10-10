@@ -6,7 +6,7 @@
 #include "freertos/task.h"
 #include "driver/gpio.h"
 #include "esp_log.h"
-#include "led_strip.h"
+// #include "led_strip.h"
 #include "sdkconfig.h"
 
 #define CSPOT_STATUS_LED_GPIO (gpio_num_t)CONFIG_CSPOT_STATUS_LED_GPIO
@@ -28,9 +28,9 @@ public:
     void setStatus(StatusLed);
 private:
     StatusLed status = IDLE;
-#ifdef CONFIG_CSPOT_STATUS_LED_TYPE_RMT
-    led_strip_t* pStrip_a;
-#endif
+// #ifdef CONFIG_CSPOT_STATUS_LED_TYPE_RMT
+//     led_strip_t* pStrip_a;
+// #endif
 };
 
 #endif

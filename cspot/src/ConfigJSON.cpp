@@ -2,16 +2,24 @@
 #include "JSONObject.h"
 #include "Logger.h"
 #include "ConstantParameters.h"
+#include "FileHelper.h"
 
+#include "esp_log.h"
+static const char* TAG = "cspot";
 
 ConfigJSON::ConfigJSON(std::string jsonFileName, std::shared_ptr<FileHelper> file)
 {
-    _file = file;
-    _jsonFileName = jsonFileName;
+    ESP_LOGI(TAG, "BBBBBBBBBBBBBBBBB1: %p", file.get());
+    this->_file = file;
+    this->_jsonFileName = jsonFileName;
 }
 
 bool ConfigJSON::load()
 {
+    ESP_LOGI(TAG, "BBBBBBBBBBBBBBBBB2 : %p", _file.get());
+    std::string output;
+    _file->readFile("/spiffs/test.json", output);
+    ESP_LOGI(TAG, "Output : %s", output.c_str());
     // Config filename check
     if(_jsonFileName.length() > 0)
     {
